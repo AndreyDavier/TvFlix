@@ -34,14 +34,14 @@
                 <input type="text" name="search" aria-label="search movies" placeholder="Search any movies..." id=""
                     class="search-field" autocomplete="off" searh-field>
 
-                <img src="./assets/images/search.png" width="24" height="24" alt="search" class="leading-icons">
+                <img src="./assets/images/search.png" width="24" height="24" alt="search" class="leading-icon">
             </div>
             <button class="search-btn" search-toggler>
                 <img src="./assets/images/close.png" width="24" height="24" alt="close search box">
             </button>
         </div>
 
-        <button class="search-btn" search-tooggler menu-close>
+        <button class="search-btn" search-toggler menu-close>
             <img src="./assets/images/search.png" width="24" height="24" alt="open search box">
         </button>
 
@@ -51,6 +51,71 @@
         </button>
 
     </header>
+
+
+
+    <!-- #SIDEBAR -->
+
+    <nav class="sidebar" sidebar>
+
+        <div class="sidebar-inner">
+            <div class="sidebar-list">
+                <p class="title">Genre</p>
+
+                <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Action</a>
+
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Horror</a>
+
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Comedy</a>
+
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Adventure</a>
+
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Drama</a>
+                 
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Sci-Fi</a>
+                
+            </div>
+
+
+            <div class="sidebar-list">
+                <p class="title">Language</p>
+
+                <a href="/movie-list.html" menu-close
+                 class="sidebar-link">English</a>
+
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">German</a>
+
+               
+                 <a href="/movie-list.html" menu-close
+                 class="sidebar-link">Russian</a>
+                 
+                
+            </div>
+
+            <div class="sidebar-footer">
+                <p class="copyright">
+                    Copyright 2024 <a href="https://youtube.com/@codewithsadee">codewithsadee</a>
+                </p>
+
+                <img src="./assets/images/tmdb-logo.svg" width="130" height="17" alt="the movie database logo">
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="overlay" overlay menu-toggler></div>
+
+
+    <article class="container" page-content></article>
+    <section class="banner" aria-label="popular movies"></section>
+
 </body>
 
 </html>
