@@ -1,15 +1,15 @@
 'use strict';
 
 
-import { api_key, fetchDataFromServer } from './api.js';
-
+import { api_key, fetchDataFromServer } from "./api.js";
 
 
 export function sidebar() {
-    const genreList = {}
 
+    const genreList = {}
     fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
 
+        console.log(genres);
         for (const { id, name } of genres) {
             genreList[id] = name;
         }
@@ -20,8 +20,8 @@ export function sidebar() {
 
 
     const sidebarIner = document.createElement("div");
-    sidebarIner.classList.add("sidebar-inner");
-    sidebarIner.innerHTML = html`
+    sidebarIner.classList.add(".sidebar-inner");
+    sidebarIner.innerHTML = `
     <div class="sidebar-list">
         <p class="title">Genre</p>
     </div>
@@ -53,13 +53,12 @@ export function sidebar() {
         for (const [genreId, genreName] of Object.entries(genreList)) {
 
             const link = document.createElement("a");
-            link.className.add("sidebar-link");
+            link.className = ("sidebar-link");
             link.setAttribute("href", "./movie-list.html")
             link.setAttribute("menu-close", "")
-            // link.setAttribute("onclick",`getMovieList("with_genre=${genreId}","${genreName}")` );
             link.textContent = genreName;
 
-            sidebarIner.querySelectorAll("sidebar-list")[0].appendChild(link)
+            sidebarIner.querySelectorAll(".sidebar-list")[0].appendChild(link)
         }
 
         const sidebar = document.querySelector("[sidebar]")
@@ -70,7 +69,7 @@ export function sidebar() {
     const toggleSidebar = function (sidebar) {
         // Toggle sidebar in mobile screen
 
-        const  sidebarBtn = document.querySelector("[menu-btn]");
+        const sidebarBtn = document.querySelector("[menu-btn]");
 
         const sidebarTogglers = document.querySelectorAll("[menu-toggler]");
 
