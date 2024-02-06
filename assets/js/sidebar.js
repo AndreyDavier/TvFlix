@@ -9,18 +9,16 @@ export function sidebar() {
     const genreList = {}
     fetchDataFromServer(`https://api.themoviedb.org/3/genre/movie/list?api_key=${api_key}`, function ({ genres }) {
 
-        console.log(genres);
         for (const { id, name } of genres) {
             genreList[id] = name;
         }
-
 
         genreLink();
     })
 
 
     const sidebarIner = document.createElement("div");
-    sidebarIner.classList.add(".sidebar-inner");
+    sidebarIner.classList.add("sidebar-inner");
     sidebarIner.innerHTML = `
     <div class="sidebar-list">
         <p class="title">Genre</p>

@@ -220,7 +220,6 @@ body {
 
 .title-large {
   font-size: var(--fs-title-lg);
-
 }
 
 .img-cover {
@@ -615,18 +614,16 @@ body {
   color: var(--text-color);
 }
 
-.banner:is(.heading, .banner-text) {
+.banner :is(.heading, .banner-text) {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-.banner .header {
+.banner .heading {
   -webkit-line-clamp: 3;
   margin-block-end: 16px;
 }
-
-
 
 .banner .genre {
   margin-block: 12px;
@@ -816,10 +813,11 @@ body {
   display: none;
 }
 
-.search-modal.active{
+.search-modal.active {
   display: block;
 }
-.search-modal .label{
+
+.search-modal .label {
   color: var(--primary-variant);
   font-weight: var(--weight-bold);
   margin-block-end: 8px;
